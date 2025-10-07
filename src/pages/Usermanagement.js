@@ -92,7 +92,7 @@ const UserManagement = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const API_URL = "https://buku-tamu-be.vercel.app/api/users"; // Ganti dengan URL backend Anda
+  const API_URL = "https://buku-tamu-be.vercel.app/api/users"; // Ganti dengan URL backend 
 
   const fetchUsers = async () => {
     setIsLoading(true);
