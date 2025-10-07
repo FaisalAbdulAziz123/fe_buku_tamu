@@ -24,7 +24,7 @@ const AdminLogin = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://buku-tamu-be.vercel.app/api", {
+      const response = await fetch("https://buku-tamu-be.vercel.app/api/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

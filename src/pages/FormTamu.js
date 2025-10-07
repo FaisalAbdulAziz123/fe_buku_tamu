@@ -116,7 +116,7 @@ const FormTamu = () => {
         JSON.stringify(payload, null, 2)
       );
 
-      const response = await fetch("https://buku-tamu-be.vercel.app/api", {
+      const response = await fetch("https://buku-tamu-be.vercel.app/api/tamu", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
