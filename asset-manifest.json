@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/fe_buku_tamu/static/css/main.60190aa8.css",
+    "main.js": "/fe_buku_tamu/static/js/main.846a9ed3.js",
+    "static/js/453.1eb7a55d.chunk.js": "/fe_buku_tamu/static/js/453.1eb7a55d.chunk.js",
+    "static/media/Tamu2.png": "/fe_buku_tamu/static/media/Tamu2.1628576f1b5a9f168db3.png",
+    "static/media/BPS.png": "/fe_buku_tamu/static/media/BPS.c67c12d55c0b9e5ee03f.png",
+    "index.html": "/fe_buku_tamu/index.html",
+    "main.60190aa8.css.map": "/fe_buku_tamu/static/css/main.60190aa8.css.map",
+    "main.846a9ed3.js.map": "/fe_buku_tamu/static/js/main.846a9ed3.js.map",
+    "453.1eb7a55d.chunk.js.map": "/fe_buku_tamu/static/js/453.1eb7a55d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60190aa8.css",
+    "static/js/main.846a9ed3.js"
+  ]
+}
