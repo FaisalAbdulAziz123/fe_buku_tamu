@@ -92,7 +92,7 @@ const UserManagement = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const API_URL = "http://localhost:5000/api/users";
+  const API_URL = "https://buku-tamu-be.vercel.app/api/";
 
   const fetchUsers = async () => {
     setIsLoading(true);

@@ -1,8 +1,8 @@
 {
   "name": "buku-tamuu",
-  "homepage": "https://faisalabdulaziz123.github.io/fe_buku_tamu",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://faisalabdulaziz123.github.io/fe_buku_tamu",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

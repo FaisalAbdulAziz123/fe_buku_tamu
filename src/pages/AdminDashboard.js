@@ -218,7 +218,7 @@ const AdminDashboard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("newest");
 
-  const API_BASE_URL = "http://localhost:5000/api";
+  const API_BASE_URL = "https://buku-tamu-be.vercel.app/api";
 
   const toggleSidebar = useCallback(() => setIsSidebarOpen((p) => !p), []);
 
