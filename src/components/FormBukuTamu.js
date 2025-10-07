@@ -17,7 +17,7 @@ function FormBukuTamu() {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://buku-tamu-be.vercel.app/api', {
+      const res = await fetch('https://buku-tamu-be.vercel.app/api/tamu', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
