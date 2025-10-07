@@ -1,0 +1,306 @@
+/* src/styles/Form.css */
+
+/* General Styling */
+.form-container {
+  max-width: 800px; /* Batasi lebar formulir */
+  margin: 40px auto; /* Tengahkan formulir */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; /* Mulai tersembunyi untuk fade-in */
+}
+
+.form-container.loaded {
+  opacity: 1; /* Munculkan setelah dimuat */
+}
+
+.guest-registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Jarak antar bagian form */
+}
+
+/* Header Section */
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.logo-container {
+  margin-bottom: 15px;
+}
+
+.bps-logo {
+  width: 100px;
+  height: auto;
+}
+
+.form-header h2 {
+  color: #2c3e50;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.form-description {
+  color: #555;
+  font-size: 1.05em;
+  line-height: 1.5;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #3498db; /* Warna biru cerah */
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-step-indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.step-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+  border: 3px solid #fff; /* Border putih agar lebih terlihat */
+}
+
+.step-dot.active {
+  background-color: #27ae60; /* Hijau saat aktif */
+  box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.4); /* Efek cahaya */
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Form Content & Sections */
+.form-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.form-content.active-step {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-section {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  color: #34495e;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  display: inline-block; /* Agar border-bottom tidak penuh */
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px; /* Jarak antar group */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.form-group label.required::after {
+  content: " *";
+  color: #e74c3c;
+  margin-left: 4px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-group .date-fixed {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  color: #666;
+}
+
+.form-group.full-span {
+  grid-column: 1 / -1; /* Mengambil seluruh lebar di grid */
+}
+
+/* Sub-sections (for dynamic fields) */
+.form-sub-section {
+  background-color: #ecf0f1; /* Warna latar belakang sedikit berbeda */
+  border-left: 4px solid #3498db; /* Garis vertikal biru */
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 25px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.form-sub-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-sub-section h4 {
+  color: #2980b9;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #aed6f1;
+}
+
+/* Action Buttons */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.action-right {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: #28a745; /* Hijau */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Abu-abu */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #007bff; /* Biru */
+  border: 2px solid #007bff;
+}
+
+.btn-outline:hover {
+  background-color: #e7f3ff;
+  color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr; /* Kolom tunggal di layar kecil */
+  }
+  .form-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .action-right {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .btn {
+    width: 100%;
+  }
+}   
