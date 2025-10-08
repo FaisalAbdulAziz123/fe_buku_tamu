@@ -26,7 +26,7 @@ const AdminLogin = () => {
       // --- PERBAIKAN DI SINI ---
       // 1. URL diubah ke alamat Vercel.
       // 2. 'Login' diubah menjadi 'login' (huruf kecil) agar sesuai dengan nama file di backend.
-      const response = await fetch("https://buku-tamu-be.vercel.app/api/users/login", {
+      const response = await fetch("https://buku-tamu-be.vercel.app/api/users/Login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
