@@ -48,7 +48,7 @@ const FollowUpForm = () => {
   const [success, setSuccess] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
-  const API_BASE_URL = "https://buku-tamu-be.vercel.app/api";
+  const API_BASE_URL = "https://buku-tamu-be.vercel.app/api/tamu";
 
   const toggleSidebar = useCallback(() => setIsSidebarOpen((p) => !p), []);
 
