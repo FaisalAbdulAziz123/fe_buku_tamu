@@ -1,8 +1,7 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles.css";
-import logoBPS from '../assets/BPS.png' 
+import logoBPS from '../assets/BPS.png';
 
 const AdminLogin = () => {
   const [username, setUsername] = useState("");
@@ -24,7 +23,10 @@ const AdminLogin = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://buku-tamu-be.vercel.app/api/users/Login", {
+      // --- PERBAIKAN DI SINI ---
+      // 1. URL diubah ke alamat Vercel.
+      // 2. 'Login' diubah menjadi 'login' (huruf kecil) agar sesuai dengan nama file di backend.
+      const response = await fetch("https://buku-tamu-be.vercel.app/api/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -53,13 +55,11 @@ const AdminLogin = () => {
 
   return (
     <div className="admin-container">
-      {/* Tambahkan elemen img untuk logo di sini */}
-     <img
-  src={logoBPS}
-  alt="Logo BPS"
-  className="login-logo"
-/>
-
+      <img
+        src={logoBPS}
+        alt="Logo BPS"
+        className="login-logo"
+      />
       <h2>Login Admin</h2>
       <form onSubmit={handleLogin}>
         <div className="form-group">
@@ -72,7 +72,6 @@ const AdminLogin = () => {
             required
           />
         </div>
-
         <div className="form-group">
           <label>Password:</label>
           <input
@@ -83,9 +82,7 @@ const AdminLogin = () => {
             required
           />
         </div>
-
         {errorMsg && <p className="error-message">{errorMsg}</p>}
-
         <button type="submit" disabled={isLoading}>
           {isLoading ? "Memproses..." : "Login"}
         </button>
