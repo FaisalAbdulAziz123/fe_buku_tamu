@@ -108,7 +108,7 @@ const Login = () => {
               <div className="qr-code-container">
                 <div className="qr-code-wrapper">
                   <QRCodeSVG
-                    value="https://sukabumikota.bps.go.id/id"
+                    value="https://sibudi.ftp.sh/"
                     size={120}
                     level="H"
                     includeMargin={true}

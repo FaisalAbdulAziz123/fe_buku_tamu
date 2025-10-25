@@ -90,7 +90,7 @@ const PrintPDF = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:5000/api/tamu")
+      .get("https://buku-tamu-be.vercel.app/api/tamu")
       .then((response) => {
         setAllGuests(response.data || []);
       })
