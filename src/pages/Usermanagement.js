@@ -207,7 +207,7 @@ const UserManagement = () => {
     if (window.confirm("Apakah Anda yakin ingin menghapus pengguna ini?")) {
       setError(null);
       try {
-        const response = await fetch(`${API_URL}/${userId}`, { method: "DELETE" });
+       const response = await fetch(`${API_URL}?id=${userId}`, { method: "DELETE" });
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({ message: `HTTP error! Status: ${response.status}` }));
           throw new Error(errorData.message || `Gagal menghapus pengguna. Status: ${response.status}`);
