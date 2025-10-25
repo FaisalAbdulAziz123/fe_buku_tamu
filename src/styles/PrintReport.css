@@ -28,6 +28,13 @@
   padding: 32px;
 }
 
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .print-page-wrapper {
+    padding: 16px;
+  }
+}
+
 /* --- Header Halaman (di luar area cetak) --- */
 .page-header {
   margin-bottom: 24px;
@@ -50,6 +57,20 @@
   font-size: 16px;
   color: #666;
   margin-top: 4px;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .page-header .page-title {
+    font-size: 22px;
+  }
+  .page-header .page-title svg {
+    width: 24px;
+    height: 24px;
+  }
+  .page-header .page-subtitle {
+    font-size: 14px;
+  }
 }
 
 /* --- Panel Filter --- */
@@ -85,6 +106,16 @@
   gap: 16px 24px;
   align-items: end;
 }
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .filter-panel__body {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
 .filter-group {
   display: flex;
   flex-direction: column;
@@ -188,6 +219,14 @@ select.form-select {
   font-family: 'Times New Roman', Times, serif;
   color: #000;
 }
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .report-area {
+    padding: 20px 16px;
+  }
+}
+
 .report-header {
   display: flex;
   align-items: center;
@@ -196,10 +235,31 @@ select.form-select {
   padding-bottom: 24px;
   margin-bottom: 32px;
 }
+
+/* Responsif untuk mobile - Logo dan Header */
+@media (max-width: 768px) {
+  .report-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+}
+
 .report-logo {
   width: 85px;
   height: auto;
+  flex-shrink: 0;
 }
+
+/* Responsif logo untuk mobile */
+@media (max-width: 768px) {
+  .report-logo {
+    width: 70px;
+  }
+}
+
 .report-title {
   text-align: center;
   flex-grow: 1;
@@ -218,6 +278,19 @@ select.form-select {
   margin-top: 8px;
   font-size: 16px;
   font-style: italic;
+}
+
+/* Responsif untuk teks header mobile */
+@media (max-width: 768px) {
+  .report-title h1 {
+    font-size: 20px;
+  }
+  .report-title h2 {
+    font-size: 16px;
+  }
+  .report-title .report-period {
+    font-size: 14px;
+  }
 }
 
 /* --- Ringkasan & Tabel --- */
@@ -241,6 +314,21 @@ select.form-select {
   gap: 16px;
   font-family: 'Inter', sans-serif;
 }
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .summary-card {
   padding: 16px;
   border-radius: 8px;
@@ -273,12 +361,28 @@ select.form-select {
   border-collapse: collapse;
   font-size: 14px; /* Sedikit lebih besar untuk keterbacaan */
 }
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .report-table {
+    font-size: 12px;
+  }
+}
+
 .report-table th, .report-table td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
   vertical-align: top;
 }
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .report-table th, .report-table td {
+    padding: 8px 6px;
+  }
+}
+
 .report-table th {
   background-color: #f2f2f2;
   font-weight: bold;
@@ -312,11 +416,32 @@ select.form-select {
   color: #555;
   page-break-before: auto;
 }
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .report-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 32px;
+  }
+}
+
 .signature-area {
   text-align: center;
   width: 250px;
   margin-left: auto;
 }
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .signature-area {
+    margin-left: 0;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
 .signature-space {
   height: 70px;
   border-bottom: 1px solid #555;
@@ -329,6 +454,14 @@ select.form-select {
   font-style: italic;
   font-size: 13px;
   align-self: flex-end;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .print-timestamp {
+    align-self: center;
+    font-size: 12px;
+  }
 }
 
 /* --- Status Loading, Error, Empty --- */
