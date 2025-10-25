@@ -207,8 +207,8 @@ const UserManagement = () => {
     if (window.confirm("Apakah Anda yakin ingin menghapus pengguna ini?")) {
       setError(null);
       try {
-      const response = await fetch(`https://buku-tamu-be.vercel.app/api/users/${userId}`, {
-       method: 'DELETE'
+ const response = await fetch(`https://buku-tamu-be.vercel.app/api/users?id=${id}`, {
+  method: 'DELETE'
 });
 
         if (!response.ok) {
